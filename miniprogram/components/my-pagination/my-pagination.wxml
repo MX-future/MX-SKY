@@ -1,0 +1,12 @@
+<!--components/pagination/pagination.wxml-->
+<view class="pagination">
+  <view class="prev">
+    <button  type="primary" size="mini" bind:tap="handleFirst" disabled="{{ current === 1 }}">首页</button>
+    <button  type="primary" size="mini" bind:tap="handlePrev" disabled="{{ current === 1 }}">上一页</button>
+  </view>
+  <view class="pagenum"><text>{{ current }}/{{ total }}</text></view>
+  <view class="next">
+    <button  type="primary" size="mini" bind:tap="handleNext" disabled="{{ current === total }}">下一页</button>
+    <button  type="primary" size="mini" bind:tap="handleEnd" disabled="{{ current === total }}">尾页</button>
+  </view>
+</view>

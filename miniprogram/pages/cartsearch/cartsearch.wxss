@@ -1,0 +1,18 @@
+/* pages/cartsearch/cartsearch.wxss */
+.search-value{
+  text-align: center;
+  margin-top: 20rpx;
+}
+.none{
+  text-align: center;
+  width: 730rpx;
+  margin: 140rpx  auto;
+}
+.none-img{
+  width: 400rpx;
+  height: 350rpx;
+}
+.none-text{
+  margin-top: 40rpx;
+  color: grey;
+}

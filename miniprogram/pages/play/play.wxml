@@ -1,0 +1,13 @@
+<!--miniprogram/pages/play/play.wxml-->
+<view class="play">
+  <video src="{{playUrl}}" autoplay></video>
+</view>
+
+<view class="btn">
+  <button type="primary" size="mini" bind:tap="getOnline">获取在线播放地址</button>
+  <button type="primary" size="mini" bind:tap="getDown">获取下载地址</button>
+</view>
+
+<view wx:if="{{downUrl === '无'}}" class="no-down">
+  <text>暂无下载地址</text>
+</view>

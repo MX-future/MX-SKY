@@ -1,0 +1,21 @@
+<!--miniprogram/pages/detail/detail.wxml-->
+<view class="detail">
+  <view class="img">
+    <image src="{{detailData[0].cover}}"></image>
+  </view>
+  <view class="msg">
+    <view class="name"><text>{{detailData[0].name}}</text></view>
+    <view class="msg-item"><text>分类: {{detailData[0].genre}}</text></view>
+    <view class="msg-item"><text>地区: {{detailData[0].region}}</text></view>
+    <view class="msg-item"><text>语言: {{detailData[0].Language}}</text></view>
+    <view class="msg-item"><text>{{detailData[0].time}}</text></view>
+  </view>
+</view>
+
+<view class="play-card">
+  <block wx:for="{{detailData[0].list}}" wx:key="id">
+    <navigator url="/pages/play/play?url={{item.m3u8url}}&onlineurl={{item.onlineurl}}&download={{item.download}}">
+      {{item.num}}
+    </navigator>
+  </block>
+</view>

@@ -1,0 +1,7 @@
+/**app.wxss**/
+@import '/components/weui-miniprogram/weui-wxss/dist/style/weui.wxss';
+
+page {
+  background: #f6f6f6;
+}
+

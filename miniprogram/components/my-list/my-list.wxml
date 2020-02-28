@@ -1,0 +1,19 @@
+<!--components/my-list/my-list.wxml-->
+
+<view class="content">
+  <block wx:for="{{coverData}}" wx:key="id">
+    <view class="item" 
+      bind:tap="toDetail" 
+      data-url="{{item.url}}" 
+      bind:longpress="longClick" 
+      data-itemdata="{{item}}">
+      <view class="item-img">
+        <image src="{{item.img}}" lazy-load=""></image>
+      </view>
+      <view class="item-msg">
+        <view class="title">{{item.name}}</view>
+        <view class="time">{{item.time}}</view>
+      </view>
+    </view>
+  </block>
+</view>

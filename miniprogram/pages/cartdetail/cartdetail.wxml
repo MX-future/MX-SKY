@@ -1,0 +1,21 @@
+<!--pages/cartdetail/cartdetail.wxml-->
+<view class="detail">
+  <view class="img">
+    <image src="{{detailData[0].cover}}"></image>
+  </view>
+  <view class="msg">
+    <view class="name"><text>{{detailData[0].name}}</text></view>
+    <view class="msg-item"><text>分类: {{detailData[0].tag}}</text></view>
+    <view class="msg-item"><text>作者: {{detailData[0].author}}</text></view>
+    <view class="msg-item"><text>状态: {{detailData[0].status}}</text></view>
+    <view class="msg-item"><text>{{detailData[0].time}}</text></view>
+  </view>
+</view>
+
+<view class="play-card">
+  <block wx:for="{{detailData[0].list}}" wx:key="id">
+    <navigator url="/pages/cartplay/cartplay?url={{item.url}}">
+      {{item.num}}
+    </navigator>
+  </block>
+</view>

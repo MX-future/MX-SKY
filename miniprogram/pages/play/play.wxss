@@ -1,0 +1,20 @@
+/* miniprogram/pages/play/play.wxss */
+page{
+  background: linear-gradient(#48dbfb,#c8d6e5)
+}
+.play{
+  width: 740rpx;
+  margin: 40rpx auto;
+  text-align: center;
+}
+.btn{
+  text-align: center;
+}
+.btn button{
+  margin: 20rpx;
+}
+.no-down{
+  width: 200rpx;
+  margin: 10rpx auto;
+  color: gray
+}

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "my-pagination": "/components/my-pagination/my-pagination"
+  },
+  "enablePullDownRefresh": true
+}

@@ -1,0 +1,14 @@
+<!--miniprogram/pages/video/video.wxml-->
+<view class="search">
+  <van-search value="{{ value }}"
+   maxlength="20"
+   bind:change="onChange"
+   bind:search="search"></van-search>
+</view>
+
+
+<my-list coverData="{{movieData}}" pageUrl="/pages/detail/detail?url="></my-list>
+
+<!-- <view class="pagination">
+  <my-pagination total="{{total}}" current="{{currentPage}}" bind:change="handleChange"></my-pagination>
+</view> -->

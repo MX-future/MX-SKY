@@ -1,0 +1,42 @@
+/* miniprogram/pages/video/video.wxss */
+.content{
+  width: 750rpx;
+  display: grid;
+  grid-template-columns: repeat(3,240rpx);
+  justify-content: center;
+}
+.item{
+  margin: 5rpx;
+  height: 400rpx;
+  margin-top: 10rpx;
+  background: white;
+  box-shadow: 0px 0px 6px #ffffff;
+}
+.item .item-img{
+  height: 300rpx;
+}
+.item .item-img image{
+  height: 300rpx;
+  width: 232rpx;
+}
+.item .item-msg{
+  position: relative;
+}
+.item .item-msg .title{
+  font-size: 26rpx;
+  height: 59rpx;
+  line-height: 59rpx;
+  overflow: hidden;
+  text-align: center;
+}
+.item .item-msg .time{
+  font-size: 24rpx;
+  height: 30rpx;
+  position: absolute;
+  bottom: -30rpx;
+  left: 5rpx;
+}
+
+.pagination{
+  margin: 40rpx 0rpx;
+}

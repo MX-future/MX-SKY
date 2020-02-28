@@ -1,0 +1,11 @@
+<!--pages/cartplay/cartplay.wxml-->
+
+<view class="cart-play">
+  <block wx:for="{{imgData}}" wx:key="id">
+    <image lazy-load src="{{item.img}}" mode="widthFix"></image>
+  </block>  
+</view>
+
+<view class="end">
+  <van-divider contentPosition="center" customStyle="color: #c8d6e5;border-color: #c8d6e5;font-size: 18px;">本章节完...</van-divider>
+</view>

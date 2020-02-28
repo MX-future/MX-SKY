@@ -1,0 +1,9 @@
+<!--miniprogram/pages/cartoon/cartoon.wxml-->
+<view class="search">
+  <van-search value="{{ value }}"
+   maxlength="20"
+   bind:change="onChange"
+   bind:search="search"></van-search>
+</view>
+
+<my-list coverData="{{cartData}}" pageUrl="/pages/cartdetail/cartdetail?url="></my-list>

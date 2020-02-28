@@ -1,0 +1,12 @@
+<!--pages/like/like.wxml-->
+<van-tabs>
+  <van-tab title="影视">
+    <my-list wx:if="{{movieData.length != 0}}" coverData="{{movieData}}" pageUrl="/pages/detail/detail?url="></my-list>
+    <van-divider  wx:if="{{movieData.length === 0}}" contentPosition="center">收藏为空</van-divider>
+  </van-tab>
+  <van-tab title="漫画">
+    <my-list wx:if="{{cartData.length != 0}}" coverData="{{cartData}}" pageUrl="/pages/cartdetail/cartdetail?url="></my-list>
+    <van-divider  wx:if="{{cartData.length === 0}}" contentPosition="center">收藏为空</van-divider>
+    
+  </van-tab>
+</van-tabs>

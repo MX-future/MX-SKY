@@ -1,0 +1,51 @@
+{
+  "pages": [
+    "pages/video/video",
+    "pages/cartoon/cartoon",
+    "pages/like/like",
+    "pages/detail/detail",
+    "pages/play/play",
+    "pages/search/search",
+    "pages/cartdetail/cartdetail",
+    "pages/cartplay/cartplay",
+    "pages/cartsearch/cartsearch"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#48dbfb",
+    "navigationBarTitleText": "MX-SKY",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2",
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/video/video",
+        "text": "影视",
+        "iconPath": "/assets/img/yingshi1.png",
+        "selectedIconPath": "/assets/img/yingshi2.png"
+      },
+      {
+        "pagePath": "pages/cartoon/cartoon",
+        "text": "漫画",
+        "iconPath": "/assets/img/manhua1.png",
+        "selectedIconPath": "/assets/img/manhua2.png"
+      },
+      {
+        "pagePath": "pages/like/like",
+        "text": "喜欢",
+        "iconPath": "/assets/img/xihuan1.png",
+        "selectedIconPath": "/assets/img/xihuan2.png"
+      }
+    ],
+    "selectedColor": "#48dbfb"
+  },
+  "usingComponents": {
+    "my-list": "/components/my-list/my-list",
+    "van-search": "@vant/weapp/search",
+    "van-tab": "@vant/weapp/tab",
+    "van-tabs": "@vant/weapp/tabs"
+  }
+}

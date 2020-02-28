@@ -1,0 +1,14 @@
+/* pages/cartplay/cartplay.wxss */
+.cart-play{
+  width: 100%;
+  margin: 0rpx auto;
+}
+.cart-play image{
+  width: 100%;
+}
+.end{
+  width: 100%;
+  margin-bottom: 90rpx;
+  text-align: center;
+  color: gainsboro;
+}
