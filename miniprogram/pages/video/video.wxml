@@ -3,12 +3,9 @@
   <van-search value="{{ value }}"
    maxlength="20"
    bind:change="onChange"
+   shape="round"
    bind:search="search"></van-search>
 </view>
-
-
-<my-list coverData="{{movieData}}" pageUrl="/pages/detail/detail?url="></my-list>
-
-<!-- <view class="pagination">
-  <my-pagination total="{{total}}" current="{{currentPage}}" bind:change="handleChange"></my-pagination>
-</view> -->
+<view class="confirm">
+  <van-button round color="#48dbfb" size="large" bind:click="search">搜索影视</van-button>
+</view>

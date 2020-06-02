@@ -13,7 +13,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.getData(options.url);
+    this.getData(options.url)
   },
   //获取详情数据
   getData(url){
@@ -21,6 +21,7 @@ Page({
       url: `/?ysurl=${url}`
     }).then(res => {
       let _data = [];  //组合数据
+      console.log('vff', res)
       _data.push({
         "cover": res.data.cover,
         "name": res.data.name,

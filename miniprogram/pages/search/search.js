@@ -29,6 +29,12 @@ Page({
       console.log(err);
     })
   },
+  toDetail(e){
+    let url = e.currentTarget.dataset.url;
+    wx.navigateTo({
+      url: '/pages/detail/detail?url=' + url,
+    })
+  },
   //下拉刷新
   onPullDownRefresh(){
     getdata(this.data.searValue).then(res => {

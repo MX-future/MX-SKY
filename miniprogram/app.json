@@ -46,6 +46,9 @@
     "my-list": "/components/my-list/my-list",
     "van-search": "@vant/weapp/search",
     "van-tab": "@vant/weapp/tab",
-    "van-tabs": "@vant/weapp/tabs"
+    "van-tabs": "@vant/weapp/tabs",
+    "van-button": "@vant/weapp/button",
+    "van-row": "@vant/weapp/row",
+    "van-cell": "@vant/weapp/cell"
   }
 }

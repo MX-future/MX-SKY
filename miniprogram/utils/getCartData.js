@@ -6,29 +6,25 @@ function getCartData(name) {
     request({
       url: `/?mhname=${name}`
     }).then(res => {
-      console.log('url数据', res)
       if (res.message === '成功!') {
         if (res.code === 0) {
           let urlData = [];  //存放url地址
           for (let i = 0; i <= res.list.length - 1; i++) {
             urlData.push({
-              'url': res.list[i].url
+              'name': res.list[i].name,
+              'url': res.list[i].url,
+              'img': res.list[i].cover,
+              'classify':'1'   //1代表漫画
             });
+            if (i === res.list.length - 1) {
+              resolve(urlData)
+            }
           }
-          getHomeData(urlData).then(res => {
-            //console.log('重组数据',res)
-            resolve(res);
-          }).catch(err => {
-            console.log(err);
-            reject(err);
-          });
         }
       } else {
         let none = [];
         resolve(none);
       }
-
-
     }).catch(err => {
       console.log(err)
     });
@@ -37,30 +33,25 @@ function getCartData(name) {
 }
 
 //根据获取到的url去请求相应数据
-function getHomeData(urlData) {
+function getHomeData(url) {
   return new Promise((resolve, reject) => {
     let newData = [];   //存放重组后的数据
-    for (let i = 0; i <= urlData.length - 1; i++) {
-      request({
-        url: `/?mhurl1=${urlData[i].url}`
-      }).then(res => {
-        if (res.code === 0) {
-          newData.push({
-            "url": urlData[i].url,
-            "img": res.data.cover,
-            "name": res.data.name,
-            "time": '数据来源于第三方',
-            'classify': '1'   //1代表漫画
-          });
-          if (i === urlData.length - 1) {
-            resolve(newData);
-          }
-        }
-      }).catch(err => {
-        console.log(err);
-        reject(err);
-      });
-    }
+    request({
+      url: `/?mhurl1=${url}`
+    }).then(res => {
+      if (res.code === 0) {
+        newData.push({
+          "url": urlData[i].url,
+          "img": res.data.cover,
+          "name": res.data.name,
+          "classify": '1'   //1代表漫画
+        });
+        resolve(newData);
+      }
+    }).catch(err => {
+      console.log(err);
+      reject(err);
+    });
   });
 
 }

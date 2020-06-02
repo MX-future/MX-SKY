@@ -18,20 +18,9 @@
   width: 300rpx;
   height: 400rpx;
 }
-
-.msg .name{
-  margin-top: 10rpx;
-  margin-left: 30rpx;
-  font-size: 32rpx;
-  height: 100rpx;
-  overflow: hidden
+.msg{
+  margin: 50rpx 40rpx 30rpx 40rpx;
 }
-.msg .msg-item{
-  margin-top: 20rpx;
-  margin-left: 30rpx;
-  overflow: hidden
-}
-
 .play-card{
   margin: 40rpx auto;
   padding: 20rpx 0rpx;

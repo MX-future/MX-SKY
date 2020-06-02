@@ -4,11 +4,11 @@
     <image src="{{detailData[0].cover}}"></image>
   </view>
   <view class="msg">
-    <view class="name"><text>{{detailData[0].name}}</text></view>
-    <view class="msg-item"><text>分类: {{detailData[0].genre}}</text></view>
-    <view class="msg-item"><text>地区: {{detailData[0].region}}</text></view>
-    <view class="msg-item"><text>语言: {{detailData[0].Language}}</text></view>
-    <view class="msg-item"><text>{{detailData[0].time}}</text></view>
+    <view class="name van-ellipsis"><text>{{detailData[0].name}}</text></view>
+    <view class="msg-item van-ellipsis"><text>分类: {{detailData[0].genre}}</text></view>
+    <view class="msg-item van-ellipsis"><text>地区: {{detailData[0].region}}</text></view>
+    <view class="msg-item van-ellipsis"><text>语言: {{detailData[0].Language}}</text></view>
+    <view class="msg-item van-ellipsis"><text>{{detailData[0].time}}</text></view>
   </view>
 </view>
 

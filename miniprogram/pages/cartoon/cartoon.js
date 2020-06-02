@@ -21,9 +21,10 @@ Page({
      this.setData({
        cartData: res
      });
+     console.log(this.data.cartData)
      wx.hideLoading();
    }).catch(err => {
-     consoe.log(err);
+     console.log(err);
    });
   },
   //搜索框的值变化时调用
