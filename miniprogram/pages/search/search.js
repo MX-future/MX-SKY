@@ -20,7 +20,6 @@ Page({
       title: '搜索中',
     })
     getdata(options.value).then(res => {
-      console.log('res',res)
       this.setData({
         searchData: res
       });

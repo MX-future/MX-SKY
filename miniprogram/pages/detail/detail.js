@@ -21,20 +21,31 @@ Page({
       url: `/?ysurl=${url}`
     }).then(res => {
       let _data = [];  //组合数据
-      console.log('vff', res)
-      _data.push({
-        "cover": res.data.cover,
-        "name": res.data.name,
-        "genre": res.data.genre,
-        "region": res.data.region,
-        "Language": res.data.Language,
-        "time": res.data.time,
-        "list": res.list
-      });
-      this.setData({
-        detailData: _data
-      });
-      console.log(this.data.detailData)
+      if(res.code === 1) {
+        wx.showToast({
+          title: '该链接已失效',
+          icon: 'none',
+          duration: 2000
+        })
+        setTimeout(() => {
+          wx.navigateBack({
+            delta: 1
+          })
+        }, 2000)
+      } else {
+        _data.push({
+          "cover": res.data.cover,
+          "name": res.data.name,
+          "genre": res.data.genre,
+          "region": res.data.region,
+          "Language": res.data.Language,
+          "time": res.data.time,
+          "list": res.list
+        });
+        this.setData({
+          detailData: _data
+        });
+      } 
     }).catch(err => {
       console.log(err)
     });;
