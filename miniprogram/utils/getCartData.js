@@ -6,24 +6,21 @@ function getCartData(name) {
     request({
       url: `/?mhname=${name}`
     }).then(res => {
-      if (res.message === '成功!') {
-        if (res.code === 0) {
-          let urlData = [];  //存放url地址
-          for (let i = 0; i <= res.list.length - 1; i++) {
-            urlData.push({
-              'name': res.list[i].name,
-              'url': res.list[i].url,
-              'img': res.list[i].cover,
-              'classify':'1'   //1代表漫画
-            });
-            if (i === res.list.length - 1) {
-              resolve(urlData)
-            }
+      let urlData = [];  //存放url地址
+      if (res.code === 0) {
+        for (let i = 0; i <= res.list.length - 1; i++) {
+          urlData.push({
+            'name': res.list[i].name,
+            'url': res.list[i].url,
+            'img': res.list[i].cover,
+            'classify':'1'   //1代表漫画
+          });
+          if (i === res.list.length - 1) {
+            resolve(urlData.reverse())
           }
         }
-      } else {
-        let none = [];
-        resolve(none);
+      } else if (res.code === 1) {
+        resolve(urlData)
       }
     }).catch(err => {
       console.log(err)

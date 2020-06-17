@@ -6,7 +6,8 @@ Page({
    */
   data: {
     searValue: '',
-    searchData: []
+    searchData: [],
+    isNull: ''
   },
 
   /**
@@ -24,6 +25,15 @@ Page({
         searchData: res
       });
       wx.hideLoading();
+      if (res.length !== 0) {
+        this.setData({
+          isNull: false
+        })
+      } else {
+        this.setData({
+          isNull: true
+        })
+      }
     }).catch(err => {
       console.log(err);
     })

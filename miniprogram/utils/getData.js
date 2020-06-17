@@ -6,9 +6,8 @@ function getData(name) {
     request({
       url: `/?ysname=${name}`
     }).then(res => {
-      console.log('url数据', res)
+      let urlData = [];  //存放url地址
       if (res.code === 0) {
-        let urlData = [];  //存放url地址
         for (let i = 0; i <= res.list.length - 1; i++) {
           urlData.push({
             'url': res.list[i].url,
@@ -20,7 +19,9 @@ function getData(name) {
             resolve(urlData)
           }
         }
-      }  
+      } else if (res.code === 1) {
+        resolve(urlData)
+      }
     }).catch(err => {
       console.log(err)
       reject(err)

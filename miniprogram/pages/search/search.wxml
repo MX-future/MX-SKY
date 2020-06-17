@@ -2,7 +2,7 @@
 <view class="search-value">
   <text>搜索"{{searValue}}"的结果</text>
 </view>
-<view class="search-list">
+<view class="search-list" wx:if="{{searchData && !isNull}}">
   <block wx:for="{{searchData}}" wx:key="id">
     <van-cell 
       title="{{item.name}}" 
@@ -12,7 +12,7 @@
       label="{{item.time}}" bind:tap="toDetail" />
   </block>
 </view>
-<view wx:if="{{searchData.length === 0 }}" class="none">
+<view wx:if="{{!searchData && isNull }}" class="none">
   <image src="/assets/img/kong.png" class="none-img"></image>
   <view class="none-text">
     <text>结果为空</text>

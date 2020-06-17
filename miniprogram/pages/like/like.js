@@ -29,7 +29,6 @@ Page({
     let data1 = [];  //临时存放影视数据
     let data2 = []   //临时存放影视数据
     collect.get().then(res => {
-      console.log(res.data)
       for (let i = 0; i <= res.data.length - 1; i++) {
         if (res.data[i].classify === '0') {
           data1.push(res.data[i]);

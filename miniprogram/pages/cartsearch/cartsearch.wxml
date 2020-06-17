@@ -2,8 +2,8 @@
 <view class="search-value">
   <text>搜索"{{searValue}}"的结果</text>
 </view>
-<my-list coverData="{{searchData}}" pageUrl="/pages/cartdetail/cartdetail?url="></my-list>
-<view wx:if="{{searchData.length === 0 }}" class="none">
+<my-list coverData="{{searchData}}" pageUrl="/pages/cartdetail/cartdetail?url=" wx:if="{{searchData && !isNull}}"></my-list>
+<view wx:if="{{!searchData && isNull }}" class="none">
   <image src="/assets/img/kong.png" class="none-img"></image>
   <view class="none-text">
     <text>结果为空</text>

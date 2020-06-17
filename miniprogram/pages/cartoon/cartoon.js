@@ -21,7 +21,6 @@ Page({
      this.setData({
        cartData: res
      });
-     console.log(this.data.cartData)
      wx.hideLoading();
    }).catch(err => {
      console.log(err);
